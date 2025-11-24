@@ -1,0 +1,29 @@
+name: Regular CI (old Node.js)
+on:
+  push:
+      branches:
+        - "**"
+        - "!pr/*"
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['20.x', '22.x']
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+      - name: Build
+        run: pnpm build:lib
+      - name: Test
+        run: pnpm test:lib

@@ -1,0 +1,48 @@
+name: Regular CI
+on:
+  push:
+      branches:
+        - "**"
+        - "!pr/*"
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org'
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+      - name: Lint (prebuild)
+        run: node --run lint:prebuild
+      - name: Build
+        run: node --run build
+      - name: Lint (postbuild)
+        run: node --run lint:postbuild
+      - name: Test
+        run: node --run test
+      - name: Build website
+        run: node --run build:website
+      - name: Upload website artifacts
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website/dist
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  update-website:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    needs: build
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'

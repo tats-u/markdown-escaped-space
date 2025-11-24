@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "test": "vitest",
+    "biome:migrate": "biome migrate --write",
+    "build": "pnpm -r build",
+    "test:lib": "pnpm -r test:lib",
+    "build:lib": "pnpm -r build:lib",
+    "build:website": "pnpm -r build:website",
+    "lint": "run-s lint:prebuild lint:postbuild",
+    "lint:prebuild": "run-s lint:biome",
+    "lint:postbuild": "run-s lint:type",
+    "lint:type": "pnpm -r lint:type",
+    "lint:biome": "biome check",
+    "fix": "run-s fix:*",
+    "fix:biome": "biome check --write",
+    "postupdate:biome": "biome migrate --write"
+  },
+  "packageManager": "pnpm@10.22.0",
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.7",
+    "npm-run-all2": "^8.0.4",
+    "vitest": "catalog:"
+  }
+}
