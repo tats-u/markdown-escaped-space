@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-escaped-space",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A markdown-it plugin that fixes emphasis markers and GFM autolinks in CJK text using escaped spaces, inspired by reStructuredText and goldmark. Also converts escaped double spaces to non-breaking spaces and fixes full-width space trimming.",
   "type": "module",
   "license": "MIT",
