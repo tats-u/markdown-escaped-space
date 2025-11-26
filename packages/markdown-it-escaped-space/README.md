@@ -128,7 +128,7 @@ Renders as:
 
 This is useful for:
 - Keeping titles and names together on a single line
-- Preventing separation of abbreviations from units (e.g., "5\  cm")
+- Preventing separation of abbreviations from units (e.g., "5&nbsp;cm")
 - Professional typography where specific spacing rules apply
 
 > [!NOTE]
@@ -207,7 +207,7 @@ The\  quick brown fox
 
 This extension is a port of the `WithEscapedSpace` option from [goldmark](https://github.com/yuin/goldmark)'s CJK extension.
 
-There is another approach to handling CJK text in Markdown without adding extra symbols `\ ` (CJK Friendly Emphasis Extension):
+There is another more user-friendly approach to handling CJK text in Markdown without adding extra symbols `\ ` (CJK Friendly Emphasis Extension):
 
 - [markdown-it-cjk-friendly / remark-cjk-friendly](https://github.com/tats-u/markdown-cjk-friendly)
 - [goldmark-cjk-friendly](https://github.com/tats-u/goldmark-cjk-friendly)
@@ -226,7 +226,7 @@ In addition to the escaped space features, this extension fixes a **markdown-it 
 
 ### The Issue
 
-markdown-it uses JavaScript's `.trim()` method to remove leading/trailing whitespace from lines. However, `.trim()` removes **all Unicode whitespace characters**, not just ASCII spaces (U+0020) as specified by CommonMark. This causes full-width spaces ( U+3000) and other non-ASCII whitespace to be stripped from the source, which is problematic when:
+markdown-it uses JavaScript's `.trim()` method to remove leading/trailing whitespace from lines. However, `.trim()` removes **all Unicode whitespace characters**, not just ASCII spaces (U+0020) as specified by CommonMark. This causes full-width spaces (U+3000) and other non-ASCII whitespace to be stripped from the source, which is problematic when:
 
 1. You intentionally use full-width spaces for visual formatting in Japanese, Chinese, or Korean text
 2. Third-party extensions rely on full-width spaces at line boundaries for special processing
@@ -272,18 +272,18 @@ MIT
 
 - Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   pnpm install
+   ```
 
 - Run the unit tests:
 
-```bash
-npm run test
-```
+   ```bash
+   pnpm run test
+   ```
 
 - Build the library:
 
-```bash
-npm run build
-```
+   ```bash
+   pnpm run build
+   ```

@@ -130,7 +130,7 @@ Renders as:
 
 This is useful for:
 - Keeping titles and names together on a single line
-- Preventing separation of abbreviations from units (e.g., "5\  cm")
+- Preventing separation of abbreviations from units (e.g., "5&nbsp;cm")
 - Professional typography where specific spacing rules apply
 
 > [!NOTE]
@@ -209,7 +209,7 @@ The\  quick brown fox
 
 This extension is a port of the `WithEscapedSpace` option from [goldmark](https://github.com/yuin/goldmark)'s CJK extension.
 
-There is another approach to handling CJK text in Markdown without adding extra symbols `\ ` (CJK Friendly Emphasis Extension):
+There is another more user-friendly approach to handling CJK text in Markdown without adding extra symbols `\ ` (CJK Friendly Emphasis Extension):
 
 - [markdown-it-cjk-friendly / remark-cjk-friendly](https://github.com/tats-u/markdown-cjk-friendly)
 - [goldmark-cjk-friendly](https://github.com/tats-u/goldmark-cjk-friendly)
