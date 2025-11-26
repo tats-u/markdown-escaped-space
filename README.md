@@ -4,7 +4,7 @@ A CommonMark extension that allows escaped spaces around emphasis markers and GF
 
 ## Packages
 
-- [markdown-it-escaped-space](./packages/markdown-it-escaped-space) [![Version](https://img.shields.io/npm/v/markdown-it-escaped-space)](https://npmjs.com/package/markdown-it-escaaped-space) ![Node Current](https://img.shields.io/node/v/markdown-it-escaaped-space) [![NPM Downloads](https://img.shields.io/npm/dm/markdown-it-escaaped-space)](https://npmjs.com/package/markdown-it-escaped-space) [![NPM Last Update](https://img.shields.io/npm/last-update/markdown-it-escaaped-space)](https://npmjs.com/package/markdown-it-escaped-space)
+- [markdown-it-escaped-space](./packages/markdown-it-escaped-space) [![Version](https://img.shields.io/npm/v/markdown-it-escaped-space)](https://npmjs.com/package/markdown-it-escaped-space) ![Node Current](https://img.shields.io/node/v/markdown-it-escaped-space) [![NPM Downloads](https://img.shields.io/npm/dm/markdown-it-escaped-space)](https://npmjs.com/package/markdown-it-escaped-space) [![NPM Last Update](https://img.shields.io/npm/last-update/markdown-it-escaped-space)](https://npmjs.com/package/markdown-it-escaped-space)
 
 ## Problem
 
