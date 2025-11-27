@@ -33,10 +33,10 @@
   "devDependencies": {
     "@types/markdown-it": "catalog:",
     "@types/node": "catalog:",
-    "bumpp": "^10.3.1",
+    "bumpp": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
-    "vitest": "^4.0.9",
+    "vitest": "catalog:",
     "jsdom": "catalog:"
   },
   "dependencies": {

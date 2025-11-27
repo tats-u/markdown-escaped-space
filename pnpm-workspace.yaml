@@ -16,3 +16,4 @@ catalog:
   typescript: ^5.9.3
   tsdown: ^0.16.4
   vitest: ^4.0.12
+  bumpp: ^10.3.1
